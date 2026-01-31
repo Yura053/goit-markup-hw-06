@@ -865,7 +865,7 @@ svg {
      letter-spacing: 0.04em;
      color: #757575;
  } */
- .main-form-policy-label {
+ /* .main-form-policy-label {
      display: flex;
      align-items: center;
      gap: 8px;
@@ -873,7 +873,18 @@ svg {
      line-height: 1.33;
      letter-spacing: 0.04em;
      color: #757575;
- }
+ } */
+  .main-form-policy-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 1.33;
+      letter-spacing: 0.04em;
+      color: #757575;
+      margin-bottom: 24px;
+      
+  }
 
 .main-form-policy-check {}
 
@@ -890,10 +901,27 @@ svg {
     fill: transparent;
     flex-shrink: 0;
 } */
+ /* квадратик */
+.main-form-policy-fake-check {
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2e2f42;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+/* галочка схована ЗАВЖДИ */
+.main-form-policy-fake-check svg {
+    display: none;
+    fill: #ffffff;
+}
 .main-form-policy-check:checked+.main-form-policy-fake-check {
     background-color: #404bbf;
     border: none;
     fill: #ffffff;
+    border-color: #404bbf;
 }
 
 .main-form-policy-check:focus+.main-form-policy-fake-check {
@@ -928,9 +956,13 @@ svg {
          fill: #ffffff;
          /* біла галочка */
      } */
- .main-form-policy-check:checked+.main-form-policy-fake-check svg {
+ /* .main-form-policy-check:checked+.main-form-policy-fake-check svg {
      display: block;
- }
+ } */
+  /* показуємо галочку */
+  .main-form-policy-check:checked+.main-form-policy-fake-check svg {
+      display: block;
+  }
 
 /* .main-form-policy-check:checked+span {
     fill: #f4f4fd;
