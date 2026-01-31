@@ -850,7 +850,7 @@ svg {
     border-color: #4d5ae5;
 }
 
-.main-form-policy-label {
+/* .main-form-policy-label {
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -858,11 +858,26 @@ svg {
     letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 24px;
-}
+} */
+ /* .main-form-policy-label {
+     font-size: 12px;
+     line-height: 1.33;
+     letter-spacing: 0.04em;
+     color: #757575;
+ } */
+ .main-form-policy-label {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-size: 12px;
+     line-height: 1.33;
+     letter-spacing: 0.04em;
+     color: #757575;
+ }
 
 .main-form-policy-check {}
 
-.main-form-policy-fake-check {
+/* .main-form-policy-fake-check {
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -874,35 +889,76 @@ svg {
     position: relative;
     fill: transparent;
     flex-shrink: 0;
+} */
+.main-form-policy-check:checked+.main-form-policy-fake-check {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
 }
 
 .main-form-policy-check:focus+.main-form-policy-fake-check {
     outline: 1px solid #404bbf;
 }
 
+
 .main-form-policy-check:checked+.main-form-policy-fake-check {
     background-color: #404bbf;
     border: 1px solid #404bbf;
 }
 
-.main-form-policy-fake-check svg {
+/* .main-form-policy-fake-check svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
+ .main-form-policy-fake-check {
+     width: 16px;
+     height: 16px;
+     border: 1.25px solid #2e2f42;
+     border-radius: 2px;
 
-.main-form-policy-check:checked+span {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     /* спочатку ховаємо SVG */
+     /* svg {
+         display: none;
+         fill: #ffffff;
+         /* біла галочка */
+     } */
+ .main-form-policy-check:checked+.main-form-policy-fake-check svg {
+     display: block;
+ }
+
+/* .main-form-policy-check:checked+span {
     fill: #f4f4fd;
+} */
+.main-form-policy-check:checked+.main-form-policy-fake-check {
+    background-color: #404bbf;
+    /* фон квадратика */
+    border-color: #404bbf;
+
+    svg {
+        display: block;
+        /* показуємо галочку */
+    }
 }
 
-.main-form-policy-label a {
+/* .main-form-policy-label a {
     line-height: 1.33333;
     letter-spacing: normal;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
-}
+} */
+ .main-form-policy-label a {
+     line-height: inherit;
+     letter-spacing: inherit;
+     color: #4d5ae5;
+     text-decoration: underline;
+ }
 
 .main-form-submit-btn {
     border-radius: 4px;
